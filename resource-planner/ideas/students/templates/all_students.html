@@ -1,0 +1,45 @@
+{% extends "master.html" %}
+
+{% block title %}
+IDEAS Student List
+{% endblock %}
+
+
+{% block content %}
+<h1>Students On the Ideas Programme</h1>
+<ul>
+    {% for x in allstudents %}
+    <li>
+        <a href="details/{{x.id}}">{{x.names}} - location: {{x.location}} </a>
+    </li>
+    {% endfor %}
+</ul>
+
+<hr />
+
+<p>Back to <a href="/">Home Page</a></p>
+{% endblock %}
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Students On the Ideas Programme</h1>
+    <ul>
+      {% for x in allstudents %}
+      <li>
+        <a href="details/{{x.id}}">{{x.names}} - location: {{x.location}} </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <hr />
+
+    <p>Back to <a href="/students">Home Page</a></p>
+  </body>
+</html> -->

@@ -1,0 +1,1 @@
+A Sample project I am using to learn django.
