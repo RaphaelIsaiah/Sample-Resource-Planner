@@ -21,3 +21,11 @@ class Student(models.Model):
 
     def __str__(self):
         return self.names
+
+class Attendance(models.Model):
+    student_id = models.CharField(max_length=150, unique=True)
+    date = models.DateTimeField(unique=True)
+    student_name = models.CharField(max_length=250, unique=True)
+
+    def __str__(self):
+        return self.student_name
